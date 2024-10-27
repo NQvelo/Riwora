@@ -1,0 +1,414 @@
+@font-face {
+  font-family: "Clash-Grotesk";
+  src: url("https://fonts.cdnfonts.com/s/33156/ClashGrotesk-Medium.woff")
+    format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+body {
+  font-family: "Avenir-Light", sans-serif;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #ffffff;
+}
+
+/* Header Section */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+  left: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 100px;
+  margin-right: 5px;
+}
+
+.logo h1 {
+  font-family: "Clash-Grotesk", sans-serif;
+  font-size: 1.3rem;
+  color: rgb(0, 0, 0);
+  margin: 0;
+  font-weight: 300;
+}
+
+nav {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+  margin-right: 80px;
+}
+
+.navigation ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+  color: #ffaff2;
+}
+.background-image {
+  background-image: url("assets/your-image.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: none;
+}
+
+/* Parallax Video Styling */
+.parallax-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 300;
+  color: rgb(0, 0, 0);
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  line-height: 1.7;
+  max-width: 700px;
+  font-weight: 300;
+  color: rgb(0, 0, 0);
+  margin: 0 auto;
+}
+
+.cta-btn {
+  padding: 15px 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 30px;
+  border: 2px solid white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  position: relative;
+  top: 80px;
+}
+
+.cta-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffaff2;
+}
+
+.big-image-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.text-and-image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.big-image {
+  width: 1000px;
+  height: 600px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .big-image-section {
+    margin-left: 20px;
+    margin-top: 50px;
+  }
+
+  .text-and-image-container {
+    align-items: center;
+    text-align: center;
+  }
+
+  #animated-text {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .big-image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* What You Get Section */
+.features {
+  background-color: #ffffff;
+  padding: 60px 15px;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.feature-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.feature-box div {
+  width: 350px;
+  padding: 15px;
+  background-color: rgb(203, 220, 249);
+  border-radius: 10px;
+  margin: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.feature-box div:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.feature-box img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.feature-box h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.feature-box p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  font-weight: 300;
+}
+
+/* Customer Reviews Section */
+.reviews-section {
+  background-color: #ffffff;
+  padding: 60px 15px;
+  text-align: left; /* Align to the left */
+  margin-bottom: 30px;
+  max-width: 400px; /* Constrain width to keep reviews on the left */
+  margin-left: 40px;
+}
+
+.reviews-section h2 {
+  font-size: 1.8rem; /* Same as "What You Get" */
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.reviews-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+.review {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.review img {
+  width: 70px; /* Square image dimensions */
+  height: 70px;
+  border-radius: 8px; /* Rounded corners */
+  object-fit: cover; /* Prevent stretching */
+}
+
+.review-content {
+  text-align: left;
+}
+
+.review-content h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: rgb(6, 6, 6);
+}
+
+.review-content p {
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.4;
+  color: #000000;
+}
+
+/* Counter Section */
+.counter-section {
+  background-color: #ffffff;
+  padding: 40px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.counter h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+
+.counter .number {
+  font-size: 2rem;
+  color: #000000;
+  font-weight: 300;
+}
+
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  width: 80%;
+  max-width: 600px;
+}
+
+.modal-content h2 {
+  color: white;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  background-color: #84b3ff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+input[type="submit"]:hover {
+  background-color: #ffaff2;
+}
+
+.thank-you-message {
+  color: rgb(0, 0, 0);
+  font-size: 1.2rem;
+  font-family: "Avenir-Light", sans-serif;
+  display: none;
+  margin-top: 20px;
+}
+
+.close-btn {
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  color: #000000;
+  font-weight: 300;
+}
