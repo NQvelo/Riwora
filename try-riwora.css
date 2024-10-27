@@ -19,6 +19,32 @@ body {
   align-items: center;
   /* min-height: 100vh; */
 }
+
+.custom-navbar .container-fluid {
+  font-family: "Avenir", sans-serif;
+  font-weight: 400;
+  margin: 5px 20px;
+}
+.custom-navbar {
+  backdrop-filter: blur(30px);
+  background-color: rgba(240, 240, 240, 0.587);
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.small-toggler {
+  padding: 10px; /* Adjust padding for smaller size */
+  border: none; /* Optional: remove border */
+  background: transparent; /* Optional: remove background */
+}
+
+.small-toggler .navbar-toggler-icon {
+  width: 13px; /* Adjust icon width */
+  height: 20px; /* Adjust icon height */
+  background-image: url("assets/menuicon.png"); /* Use your custom icon if needed */
+}
+
 .nav-button {
   display: inline-block;
   padding: 8px 35px;
@@ -38,20 +64,23 @@ body {
   transform: translateY(-2px);
 }
 
-.custom-navbar {
-  backdrop-filter: blur(30px);
-  background-color: rgba(240, 240, 240, 0.587);
-  position: fixed;
-  width: 100%;
-  z-index: 100;
+.container-fluid {
+  display: flex;
+  align-items: center;
 }
 
-.custom-navbar .container-fluid {
-  font-family: "Avenir", sans-serif;
-  font-weight: 400;
-  margin: 0 10px;
+.container-fluid img {
+  width: 100px;
+  margin-right: 5px;
 }
 
+.logo h1 {
+  font-family: "Clash-Grotesk", sans-serif;
+  font-size: 1.3rem;
+  color: rgb(0, 0, 0);
+  margin: 0;
+  font-weight: 300;
+}
 .container-fluid {
   display: flex;
   align-items: center;

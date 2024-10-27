@@ -23,7 +23,7 @@
           <img src="assets/logo.png" alt="logo" />
         </a>
         <button
-          class="navbar-toggler"
+          class="navbar-toggler collapsed small-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNavAltMarkup"
@@ -57,25 +57,16 @@
       });
     </script>
 
-    <!-- Hero Section with Parallax Video and Lightened Overlay -->
     <section class="hero" onmousemove="createBubbles(event)">
-      <div class="background-image"></div>
-
-      <!-- Lightened Overlay on Video -->
-      <div class="video-overlay"></div>
-
-      <!-- Content Over Video -->
-      <div class="hero-content" style="position: relative; top: -200px">
-        <!-- Adjust 'top' to move content upwards -->
-        <h1 style="color: black">Watch your sales soar 5x faster</h1>
-        <!-- Set heading color to black -->
-        <p style="color: black">
-          Riwora automates your client follow-ups, streamlines communication,
-          and maximizes sales efficiency, so you can focus on growing your
-          business.
-        </p>
-        <!-- Set paragraph text color to black -->
-        <!-- Hiding the Book a Demo button instead of removing it -->
+      <div class="background-image">
+        <div class="hero-content">
+          <h1>Watch your sales soar 5x faster</h1>
+          <p>
+            Riwora automates your client follow-ups, streamlines communication,
+            and maximizes sales efficiency, so you can focus on growing your
+            business.
+          </p>
+        </div>
         <a href="#" class="cta-btn" id="openModal" style="display: none"
           >Book a Demo</a
         >

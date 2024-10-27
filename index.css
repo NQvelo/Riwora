@@ -18,7 +18,7 @@ body {
 .custom-navbar .container-fluid {
   font-family: "Avenir", sans-serif;
   font-weight: 400;
-  margin: 0 10px;
+  margin: 5px 20px;
 }
 .custom-navbar {
   backdrop-filter: blur(30px);
@@ -26,6 +26,18 @@ body {
   position: fixed;
   width: 100%;
   z-index: 100;
+}
+
+.small-toggler {
+  padding: 10px; /* Adjust padding for smaller size */
+  border: none; /* Optional: remove border */
+  background: transparent; /* Optional: remove background */
+}
+
+.small-toggler .navbar-toggler-icon {
+  width: 13px; /* Adjust icon width */
+  height: 20px; /* Adjust icon height */
+  background-image: url("assets/menuicon.png"); /* Use your custom icon if needed */
 }
 
 .nav-button {
@@ -81,6 +93,7 @@ body {
 } */
 
 .background-image {
+  margin-top: 170px;
   background-image: url("assets/your-image.jpg");
   background-size: cover;
   background-position: center;
@@ -116,13 +129,15 @@ body {
 }
 
 .hero-content {
+  padding: 50px;
   position: relative;
   z-index: 2;
   text-align: center;
 }
 
 .hero-content h1 {
-  font-size: 2.5rem;
+  font-size: 40px;
+  font-weight: bold;
   margin-bottom: 20px;
   font-weight: 300;
   color: rgb(0, 0, 0);
@@ -179,6 +194,15 @@ body {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 30px;
+  }
+  .hero-content p {
+    font-size: 15px;
+  }
+  .background-image {
+    margin-top: 100px;
+  }
   .big-image-section {
     margin-left: 20px;
     margin-top: 50px;
