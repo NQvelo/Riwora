@@ -25,6 +25,15 @@ body {
   font-weight: 400;
   margin: 5px 20px;
 }
+
+nav.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 15px;
+}
+
 .custom-navbar {
   backdrop-filter: blur(30px);
   background-color: rgba(240, 240, 240, 0.587);
@@ -70,8 +79,16 @@ body {
 }
 
 .container-fluid img {
-  width: 100px;
+  width: 120px;
   margin-right: 5px;
+}
+
+nav.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 15px;
 }
 
 .logo h1 {
@@ -85,32 +102,6 @@ body {
   display: flex;
   align-items: center;
 }
-
-.container-fluid img {
-  width: 100px;
-  margin-right: 5px;
-}
-
-/* .logo h1 {
-  font-family: "Clash-Grotesk", sans-serif;
-  font-size: 1.3rem;
-  color: rgb(0, 0, 0);
-  margin: 0;
-  font-weight: 300;
-} */
-
-/* Background Image */
-/* .background-image {
-  background-image: url("assets/your-image.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-} */
 
 main {
   font-family: "Avenir", sans-serif;

@@ -20,6 +20,18 @@ body {
   font-weight: 400;
   margin: 5px 20px;
 }
+
+nav.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 15px;
+}
+.navbar-toggler-icon {
+  width: 20px;
+  height: 20px;
+}
 .custom-navbar {
   backdrop-filter: blur(30px);
   background-color: rgba(240, 240, 240, 0.587);
@@ -53,6 +65,7 @@ body {
   border-radius: 30px;
   transition: 0.5s ease, transform 0.5s ease;
 }
+
 .nav-button:hover {
   background: linear-gradient(90deg, #857bf8, #92c0de);
   box-shadow: 0 2px 20px rgba(133, 123, 248, 0.5);
@@ -65,7 +78,7 @@ body {
 }
 
 .container-fluid img {
-  width: 100px;
+  width: 120px;
   margin-right: 5px;
 }
 
@@ -187,13 +200,18 @@ body {
   align-items: flex-start;
 }
 
-.big-image {
-  width: 1000px;
-  height: 600px;
-}
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  .navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 1;
+    margin-top: 30px;
+  }
+  a.nav-link {
+    padding: 5px;
+    border: 1px;
+  }
+
   .hero-content h1 {
     font-size: 30px;
   }
@@ -218,10 +236,10 @@ body {
     margin-bottom: 20px;
   }
 
-  .big-image {
+  /* .big-image {
     width: 100%;
     height: auto;
-  }
+  } */
 }
 
 /* What You Get Section */
@@ -278,66 +296,131 @@ body {
   line-height: 1.4;
   font-weight: 300;
 }
+/* 
+.review-container {
+  display: flex;
+  gap: 40px;
+} */
 
-/* Customer Reviews Section */
-.reviews-section {
-  background-color: #ffffff;
-  padding: 60px 15px;
-  text-align: left; /* Align to the left */
-  margin-bottom: 30px;
-  max-width: 400px; /* Constrain width to keep reviews on the left */
-  margin-left: 40px;
-}
+/* .reviews-section,
+.big-image-section {
+  flex: 1;
+} */
 
-.reviews-section h2 {
-  font-size: 1.8rem; /* Same as "What You Get" */
-  margin-bottom: 20px;
-  font-weight: 300;
-}
-
-.reviews-container {
+.text-and-image-container {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  position: relative;
-}
-
-.review {
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  display: flex;
   align-items: center;
-  gap: 15px;
-  width: 100%;
-  margin-bottom: 20px;
+  text-align: center;
 }
 
-.review img {
-  width: 70px; /* Square image dimensions */
-  height: 70px;
-  border-radius: 8px; /* Rounded corners */
-  object-fit: cover; /* Prevent stretching */
-}
-
-.review-content {
-  text-align: left;
-}
-
-.review-content h3 {
-  font-size: 1.1rem;
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: rgb(6, 6, 6);
-}
-
-.review-content p {
-  font-size: 0.9rem;
+.typing-effect {
+  font-family: "Avenir", sans-serif;
+  color: #797676;
+  font-size: 2rem;
   font-weight: 300;
-  line-height: 1.4;
-  color: #000000;
+}
+
+.big-image {
+  object-fit: contain;
+  border-radius: 0;
+  max-width: 100%;
+}
+/* 
+@media (max-width: 768px) {
+  .review-container {
+    flex-direction: column;
+  }
+
+  .reviews-section,
+  .big-image-section {
+    margin-right: 0;
+  }
+} */
+
+.review-container {
+  display: flex;
+  gap: 20px;
+  font-family: "Avenir", sans-serif;
+  font-weight: 400;
+}
+
+.reviews-section,
+.big-image-section {
+  flex: 1;
+  width: 50%;
+}
+
+.text-and-image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.typing-effect {
+  font-family: "Avenir", sans-serif;
+  color: #797676;
+  font-size: 2rem;
+  font-weight: 300;
+}
+/* 
+.big-image {
+  object-fit: contain;
+  border-radius: 0;
+  max-width: 100%;
+} */
+
+@media (max-width: 768px) {
+  .review-container {
+    flex-direction: column;
+  }
+
+  .reviews-section,
+  .big-image-section {
+    width: 100%;
+  }
+}
+
+.review-container {
+  display: flex;
+  gap: 40px;
+}
+
+.reviews-section,
+.big-image-section {
+  flex: 1;
+}
+
+.text-and-image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.typing-effect {
+  font-family: "Avenir", sans-serif;
+  color: #797676;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+/* .big-image {
+  object-fit: contain;
+  border-radius: 0;
+  max-width: 100%;
+} */
+
+@media (max-width: 768px) {
+  .review-container {
+    flex-direction: column;
+  }
+
+  .reviews-section,
+  .big-image-section {
+    margin-right: 0;
+  }
 }
 
 /* Counter Section */
@@ -442,4 +525,107 @@ footer {
   text-align: center;
   color: #000000;
   font-weight: 300;
+}
+
+/* css new */
+
+.review {
+  margin: 20px;
+  display: flex;
+  align-items: center; /* Align items vertically center */
+  gap: 20px; /* Add space between image and content */
+}
+
+.reviews-container {
+  margin-top: 70px;
+}
+
+.review-content {
+  margin-top: 15px;
+}
+.review-container {
+  background-color: rgb(240, 242, 248);
+  display: flex;
+  gap: 40px;
+  /* justify-content: space-between; */
+  /* align-items: flex-start; */
+}
+.review img {
+  width: 70px;
+  /* height: 70px; */
+  border-radius: 5px;
+  /* object-fit: cover; */
+}
+
+.reviews-section {
+  /* background-color: #000000; */
+  flex: 1;
+  width: 50%;
+  /* padding: 50px; */
+  padding: 50px 50px 130px 50px;
+}
+/* arc */
+.big-image-section {
+  background-image: url("assets/your-big-image.jpg");
+  background-size: 900px;
+  background-position: left;
+  /* background: no-repeat; */
+  object-fit: fill;
+  /* display: block; */
+
+  /* background-color: red; */
+  flex: 1;
+  width: 50%;
+  padding: 0px;
+}
+
+.review {
+  opacity: 0;
+  transform: translateY(20px); /* Start slightly shifted down */
+  transition: opacity 0.6s ease, transform 0.6s ease; /* Control transition speed */
+}
+
+.review.show {
+  opacity: 1;
+  transform: translateY(0); /* Shift back to original position */
+}
+
+/* Responsive adjustments for mobile view */
+@media (max-width: 768px) {
+  .review-container {
+    flex-direction: column;
+  }
+  .reviews-section {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .big-image-section {
+    background-image: url("assets/your-big-image.jpg");
+    background-size: 120px;
+    background-position: left;
+    /* background: no-repeat; */
+    object-fit: fill;
+    /* display: block; */
+
+    /* background-color: red; */
+    flex: 1;
+    width: 50%;
+    padding: 0px;
+  }
+
+  .reviews-section h2 {
+    text-align: center;
+  }
+
+  .nav-button {
+    margin: 6px 5px;
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.5s ease, transform 0.5s ease;
+  }
 }
