@@ -239,7 +239,12 @@ form {
   transform: translateY(-2px);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  .custom-navbar .container-fluid {
+    font-family: "Avenir", sans-serif;
+    font-weight: 400;
+    margin: 5px 5px;
+  }
   .form-container {
     width: 100%;
   }

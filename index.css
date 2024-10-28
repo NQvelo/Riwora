@@ -592,6 +592,12 @@ footer {
 
 /* Responsive adjustments for mobile view */
 @media (max-width: 768px) {
+  .custom-navbar .container-fluid {
+    font-family: "Avenir", sans-serif;
+    font-weight: 400;
+    margin: 5px 5px;
+  }
+
   .review-container {
     flex-direction: column;
   }
