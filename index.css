@@ -78,7 +78,7 @@ nav.fixed-top {
 }
 
 .container-fluid img {
-  width: 120px;
+  width: 100px;
   margin-right: 5px;
 }
 
@@ -530,10 +530,17 @@ footer {
 /* css new */
 
 .review {
+  opacity: 0;
+  transform: translateY(20px); /* Start slightly shifted down */
+  transition: opacity 0.7s linear, transform 0.7s linear; /* Control transition speed */
+
   margin: 20px;
   display: flex;
   align-items: center; /* Align items vertically center */
   gap: 20px; /* Add space between image and content */
+  background-color: #dbdcfc;
+  padding: 10px 15px;
+  border-radius: 15px;
 }
 
 .reviews-container {
@@ -544,7 +551,7 @@ footer {
   margin-top: 15px;
 }
 .review-container {
-  background-color: rgb(240, 242, 248);
+  /* background-color: rgb(240, 242, 248); */
   display: flex;
   gap: 40px;
   /* justify-content: space-between; */
@@ -553,7 +560,7 @@ footer {
 .review img {
   width: 70px;
   /* height: 70px; */
-  border-radius: 5px;
+  border-radius: 8px;
   /* object-fit: cover; */
 }
 
@@ -579,12 +586,6 @@ footer {
   padding: 0px;
 }
 
-.review {
-  opacity: 0;
-  transform: translateY(20px); /* Start slightly shifted down */
-  transition: opacity 0.6s ease, transform 0.6s ease; /* Control transition speed */
-}
-
 .review.show {
   opacity: 1;
   transform: translateY(0); /* Shift back to original position */
@@ -607,16 +608,13 @@ footer {
   }
 
   .big-image-section {
+    padding: 100px;
     background-image: url("assets/your-big-image.jpg");
     background-size: 120px;
     background-position: left;
-    /* background: no-repeat; */
     object-fit: fill;
-    /* display: block; */
-
-    /* background-color: red; */
     flex: 1;
-    width: 50%;
+    width: 100%;
     padding: 0px;
   }
 
